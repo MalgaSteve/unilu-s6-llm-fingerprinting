@@ -1,7 +1,7 @@
 # Specification: Model Identification
 
 Meireles Lopes Steve
-version 0.1
+version 0.2
 
 ## Introduction
 This document describes the plan for my BSP S6 with the title "Recognizing and
@@ -26,20 +26,67 @@ UNIX-terminal.
 ### Users
 Everyone.
 
-### Functionality
+### Goals and Scopes
 
-- the user should be able to identify a model 
-- the user should be able to direct a follow-up attack exploiting the
-  vulnerabilities of the identified model
+- the program should be able to randomly query a set of open-source LLMs (M)
 
-## Platform
-It will be launched as a python executable. Only tested in a UNIX environnment.
-
-## Goals and Scopes
-
-- the program should be able to randomly query open-source LLMs
 - should be able to compare based on the answers given by the LLMs after being
   queried
-- 
+
+- it should provide an explanation for a set of vulnerabilities (V). The
+  cardinality the set of vulnerabilites should be at least one for every model
+  in (M).
+
+### Functional Requirement
+
+- random\_query():
+    - the program should be able to query a set of LLMs
+    - should return some sort of comparision matrix
+
+- identify\_model():
+    - with this function the user should be able to query a chatbot and give
+      the user further instructions to identify the model
+    - should return the identified model
+
+- get\_vulnerabilities():
+    - this function returns a set of vulnerabilities of the identified model
+
+- choose\_vulnerability():
+    - the user should be able to choose from a set of vulnerability
+    - the program then shows the user an explanation and a link to the attack
+      vector. 
+
+### Non-Functional Requirement
+
+No official non-function requirement yet.
+
+Quick list of what the developer is aiming but without garanty.
+
+- Portability
+
+- Reliability
+
+### Platform
+It will be launched as a python executable. Only tested in a UNIX environnment.
+
 ## Deliverables
+
+The deliverables are:
+
+- a scientific report in english
+
+- a summary of the main scientific report in french
+
+- a presentation in english
+
+- a small presentation in french
+
+- a technical product/source code
+
 ## Technical Process
+
+Following languages are used:
+
+Front-end: Python
+
+Back-end: Python
