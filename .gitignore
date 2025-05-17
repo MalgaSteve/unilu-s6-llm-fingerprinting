@@ -1,0 +1,14 @@
+venv/
+.venv/
+ENV/
+env/
+src/venv/
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+**/__pycache__/
+
+.env
+*.log
